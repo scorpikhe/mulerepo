@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="munit-demoFlow" doc:id="f788373b-21cb-460b-9aac-e2d975619b35" >
 		<http:listener doc:name="Listener" doc:id="f224493d-7138-4aeb-be4e-06a36f869f5f" config-ref="HTTP_Listener_config" path="/test"/>
 		<set-payload value='#["Welcome to Munit"]' doc:name="Set Payload" doc:id="b7b1447f-2965-45b0-88c3-5c3a5394c798" />
+		<logger level="INFO" doc:name="Logger" doc:id="2dfc3dec-9dd5-46c1-9f1d-d7e102f7c609" message="#[payload]"/>
 	</flow>
 </mule>
